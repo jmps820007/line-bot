@@ -46,9 +46,13 @@ def handle_message(event):
         r = '哈囉 需要幫忙嗎?'
     elif '訂位' in msg:
         r = '你想訂位，是嘛?'
+
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=r))
+        StickerSendMessage(
+            package_id='1',
+            sticker_id='1'
+    ))
 
 
 if __name__ == "__main__":
